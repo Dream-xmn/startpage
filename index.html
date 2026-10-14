@@ -11,32 +11,44 @@
     <header class="header">
       <p class="kicker">STARTPAGE</p>
       <h1>Dream 的起始页</h1>
-      <p class="tagline">每天打开这一页，去自己真正要用的地方。</p>
+      <p class="tagline">搜索、待办、常用入口，每天从这里开始。</p>
     </header>
 
-    <section class="note" aria-label="今日备注">
-      <h2>今日备注</h2>
-      <p>把 GitHub 仓库推上去，并打开 GitHub Pages。</p>
+    <form class="search" id="search-form" role="search">
+      <label class="sr-only" for="search-q">搜索</label>
+      <input id="search-q" name="q" type="search" placeholder="搜点什么" autofocus>
+      <div class="search-actions">
+        <button type="submit" name="engine" value="baidu">百度</button>
+        <button type="submit" name="engine" value="google">Google</button>
+      </div>
+    </form>
+
+    <section class="panel" aria-label="今日待办">
+      <h2>今日待办</h2>
+      <form id="todo-form" class="todo-form">
+        <label class="sr-only" for="todo-input">添加待办</label>
+        <input id="todo-input" type="text" placeholder="加一件今天要做的事" maxlength="80" autocomplete="off">
+        <button type="submit">添加</button>
+      </form>
+      <ul id="todo-list" class="todo-list"></ul>
+      <p class="hint">待办保存在这台电脑的浏览器里，刷新还在。换设备不会同步。</p>
     </section>
 
     <section class="groups" aria-label="常用链接">
       <article class="group">
         <h2>学习</h2>
         <ul>
+          <li><a href="https://i.chaoxing.com/">学习通</a></li>
           <li><a href="https://github.com/Dream-xmn">GitHub 主页</a></li>
           <li><a href="https://github.com/Dream-xmn/python-ai-notes">python-ai-notes</a></li>
         </ul>
       </article>
-
       <article class="group">
         <h2>工具</h2>
         <ul>
-          <li><a href="#">学校网站（待替换）</a></li>
-          <li><a href="#">常用 AI（待替换）</a></li>
-          <li><a href="#">其他常用站（待替换）</a></li>
+          <li><a href="https://doc.ergouzi.life/">ergouzi 文档</a></li>
         </ul>
       </article>
-
       <article class="group">
         <h2>我的项目</h2>
         <ul>
@@ -49,5 +61,6 @@
       <a href="https://github.com/Dream-xmn/startpage">GitHub 仓库</a>
     </footer>
   </main>
+  <script src="app.js"></script>
 </body>
 </html>
