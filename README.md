@@ -12,6 +12,12 @@
 ## 本地打开
 双击 index.html，或把文件拖进浏览器。
 
+## 用 GitHub Desktop 提交
+1. 打开 GitHub Desktop，左边选 startpage
+2. 改完文件后，左下角写一句说明
+3. 点 Commit to main
+4. 再点 Push origin
+
 ## 怎么改
 - 改链接：编辑 index.html 里的 a href
 - 待办：在页面上添加即可
